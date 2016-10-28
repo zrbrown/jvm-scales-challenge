@@ -5,7 +5,7 @@ package com.nerdery.jvm
  * @author Josh Klun (jklun@nerdery.com)
  */
 enum class Note(val cDistance: Int) {
-    A_FLAT(-4), A(-3), A_SHARP(-2),
+    A_FLAT(8), A(-3), A_SHARP(-2),
     B_FLAT(-2), B(-1), B_SHARP(0),
     C_FLAT(-1), C(0), C_SHARP(1),
     D_FLAT(1), D(2), D_SHARP(3),
