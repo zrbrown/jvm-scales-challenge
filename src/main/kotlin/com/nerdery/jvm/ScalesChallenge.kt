@@ -7,15 +7,9 @@ import javax.sound.midi.Sequence
  * @author Josh Klun (jklun@nerdery.com)
  */
 class ScalesChallenge {
-    fun buildScale(note: Note): List<RelativeNote> = listOf(
-            RelativeNote(Note.C),
-            RelativeNote(Note.D),
-            RelativeNote(Note.E),
-            RelativeNote(Note.F),
-            RelativeNote(Note.G),
-            RelativeNote(Note.A, 1),
-            RelativeNote(Note.B, 1),
-            RelativeNote(Note.C, 1))
+    fun buildScale(note: Note): List<RelativeNote> {
+        return CircleOfFifths(note).getScale()
+    }
 
     fun convertToMidi(notes: List<RelativeNote>): Sequence = NotesMidiGenerator(notes).generateSong()
 
